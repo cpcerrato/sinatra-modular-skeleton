@@ -27,6 +27,6 @@ class ResourceController < ApplicationController
   end
 
   delete '/:id' do
-    # Delete group and redirect.
+    # Delete resource and redirect.
   end
 end
