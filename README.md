@@ -1,9 +1,9 @@
 Description
 ================
 
-This is a skeleton to easily develop sinatra applications using modular style. I use rvm to manage ruby versions, if you use rbenv instead simply change .ruby-version and .ruby-gemset by the rbenv environment configuration files.
+This is a skeleton to easily develop sinatra applications using modular style.
 
-The project implement MVC scaffold the main application file that must be inherited by each controller.
+The project implement MVC scaffold under app folder, the main application file 'application_controller.rb' that must be inherited by each controller. Features folder used to BDD witch cucucmber, lib to store custom libraries, public to store css, fonts and javascripts (and images). The file config.ru import files, run the application and map routes to specific resources.
 
 ```bash
 |-- app
