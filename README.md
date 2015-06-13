@@ -9,7 +9,6 @@ The project implement MVC scaffold the main application file that must be inheri
 |-- app
 |   |-- controllers
 |   |   |-- application_controller.rb
-|   |   |-- static_pages_controller.rb
 |   |   `-- template_controller.txt
 |   |-- helpers
 |   |-- models
