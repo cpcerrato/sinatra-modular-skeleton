@@ -1,0 +1,32 @@
+# This is a skeleton to implement RESTfull requests for CRUD actions.
+
+class ResourceController < ApplicationController
+
+  get '/' do
+    # List all resources.
+  end
+
+  get '/new' do
+    # page to make new resource.
+  end
+
+  get '/:id' do
+    # Show resource (Read).
+  end
+
+  post '/' do
+    # Create new resource.
+  end
+
+  get '/edit/:id' do
+    # Uri to edit resource
+  end
+
+  put '/:id' do
+    # Update resource and redirect.
+  end
+
+  delete '/:id' do
+    # Delete group and redirect.
+  end
+end
