@@ -1,9 +1,18 @@
 Description
 ================
 
-This is a skeleton to easily develop sinatra applications using modular style.
+This is a skeleton to easily develop sinatra applications using a modular style.
 
-The project implement MVC scaffold under `app` folder, the main application file `application_controller.rb` that must be inherited by each controller. `Features` folder used to BDD witch cucucmber, `lib` to store custom libraries, `public` to store css, fonts and javascripts (and images). The file `config.ru` import gems and files, run the application and map routes to specific resources.
+The project implements a MVC scaffold under the `app` folder. I'll describe the most relevant parts:
+
+* The main application file `application_controller.rb` it's a base controller class that must be inherited by each controller.
+* `lib` folder is used to store custom libraries
+* `public` folder is used, in e.g., to host static files like css, fonts, javascripts or images. 
+* The `config.ru` [rack](http://rack.github.io/) file imports gems and files, runs the application and maps routes to specific resources.
+* `features` folder is used for implementing BDD with [cucumber](https://github.com/cucumber/cucumber)
+* `template_controller.txt` file implements RESTfull routes to implement CRUD actions by each controller. You can copy & paste renamed as whatever_controller.rb and change the class to WhateverController.
+
+This is the complete scaffold:
 
 ```bash
 |-- app
@@ -28,8 +37,8 @@ The project implement MVC scaffold under `app` folder, the main application file
 `-- tmp
 ```
 
-Empty folder contains `.gitkeep` file (is a convention, git assigns no special significance to this name) to keep them at git repository. When you create your first file inside a empty folder you should delete `.gitkeep` file because there isn't necesary anymore. If you don't plan to use database, cucumber or some other folder you should delete it.
+Empty folders contain a `.gitkeep` file is just a placeholder. It's a convention, git assigns no special significance to this name.
+When you create your first file inside an empty folder you should delete `.gitkeep` file because it won't necessary anymore. 
+If you don't plan to use database, cucumber or some other folder you can delete it.
 
-The file `template_controller.txt` implements RESTfull routes to implement CRUD actions by each controller. Yo can copy & paste renamed as whatever_controller.rb and change the class to WhateverController.
-
-In order to configure environment (in my case rvm) you must create `.ruby-version` and `.ruby-gemset` at root to isolate the environment.
+In order to configure your ruby environment (in my case I use rvm) you must create `.ruby-version` and `.ruby-gemset` at project's root to isolate the environment.
